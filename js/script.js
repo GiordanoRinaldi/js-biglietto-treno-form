@@ -31,7 +31,11 @@ function() {
         etapass.innerHTML = "tariffa normale";
         costo.innerHTML = prezzoTot;
     }
-    
+    console.log(km)
+    //carrozza
+    document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 6) + 1;
+    //
+    document.getElementById("codiceCP").innerHTML = Math.floor(Math.random() * 999) + 9000;
 });
 
 
