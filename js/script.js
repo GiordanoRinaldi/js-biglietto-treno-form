@@ -8,14 +8,15 @@
 //creo var dei dati
 var nome = document.getElementById("nome");
 var km = parseInt(document.getElementById("km"));
-var eta = document.getElementById("eta")
+var eta = document.getElementById("eta");
+console.log(eta)
 
 var genera = document.getElementById("genera");
 var annulla = document.getElementById("annulla");
 
 //var del "biglietto"
 var nomepass = document.getElementById("nomepass");
-var costo = document.getElementById("costo")
+var costo = (document.getElementById("costo"));
 var prezzoTot = km * 0.21;
 
 //creazione "envento" al click su genera
@@ -24,12 +25,14 @@ function() {
     //nome pass
     nomepass.innerHTML = nome.value;
     //prezzo biglietto + offerta
-    if (eta == "minorenne"){
+    if (eta.value == "minorenne"){
         etapass.innerHTML = "offerta giovani";
         costo.innerHTML = (prezzoTot / 100 * 80).toFixed(2);
-    } else if (eta == "over" ){
+    } else if (eta.value == "over"){
         etapass.innerHTML = "tariffa vecchi";
         costo.innerHTML = (prezzoTot / 100 * 60).toFixed(2);
+    } else {
+        etapass.innerHTML = "tariffa normale";
     }
 
 
