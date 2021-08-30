@@ -6,10 +6,16 @@
 
 body {
     background-color: #B91450;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 10px 0;
 }
 
 h1, h2 {
     text-align: center;
+    color: #fff;
 }
 
 .container {
@@ -17,14 +23,68 @@ h1, h2 {
     margin: auto;
     background-color: #fff;
     text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0px #000000;
 }
+
+.sezione input, .sezione select {
+    margin-top: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottoni {
+    margin-top: 30px;
+}
+
 
 label {
     color: #B91450;
 }
 
+input {
+    border: 2px solid #B91450;
+    border-radius: 4px;
+    text-align: center;
+}
+
+input:focus-visible {
+    outline: #B91450 auto 0px;
+}
+
+select {
+    border: 2px solid #B91450;
+    border-radius: 4px;
+    text-align: center;
+}
+
+select:focus-visible {
+    outline: #B91450 auto 0px;
+}
+
+button {
+    padding: 3px;
+    font-size: 20px;
+    color: #B91450;
+    border-color: black;
+    border-radius: 4px;
+}
+
+button:hover {
+    border: 2px solid #e45124;
+    border-radius: 4px;
+}
+
 .container.passenger h4 {
     text-align: start;
+}
+
+h2 {
+    margin-top: 10px;
 }
 
 .no-show {
@@ -33,4 +93,28 @@ label {
 
 .show {
     display: block;
+}
+
+.align-start {
+    text-align: start;
+    justify-content: space-between;
+}
+
+.linea {
+    height: 1.5px;
+    background-color: gray;
+}
+
+.nome-passeggero {
+    width: 25%;
+    background-color: gray;
+}
+
+.mbottom {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.flex.align-start div {
+    padding: 10px;
 }

@@ -11,7 +11,7 @@ var genera = document.getElementById("genera");
 
 //creazione "envento" al click su genera
 genera.addEventListener("click", 
-function() {
+function() { 
     //creo var dei dati
     var nome = document.getElementById("nome");
     var km = parseInt(document.getElementById("km").value);
@@ -24,13 +24,13 @@ function() {
     nomepass.innerHTML = nome.value;
     //prezzo biglietto + offerta
     if (eta.value == "minorenne"){
-        etapass.innerHTML = "offerta giovani";
+        etapass.innerHTML = "Promo giovani";
         costo.innerHTML = (prezzoTot / 100 * 80).toFixed(2) + " &euro;";
     } else if (eta.value == "over"){
-        etapass.innerHTML = "tariffa vecchi";
+        etapass.innerHTML = "Tariffa senior";
         costo.innerHTML = (prezzoTot / 100 * 60).toFixed(2) + " &euro;";
     } else {
-        etapass.innerHTML = "tariffa normale";
+        etapass.innerHTML = "Tariffa normale";
         costo.innerHTML = prezzoTot + " &euro;";
     }
     console.log(km)
@@ -48,9 +48,9 @@ var annulla = document.getElementById("annulla");
 
 annulla.addEventListener("click", 
 function() {
-    document.getElementById("nome").value = " ";
-    document.getElementById("km").value = " ";
-    document.getElementById("eta").value = " ";
+    document.getElementById("nome").value = "";
+    document.getElementById("km").value = "";
+    //document.getElementById("eta").value = ;
 
 
     biglietto.classList.remove("show")

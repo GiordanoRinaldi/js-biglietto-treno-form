@@ -11,60 +11,82 @@
         <!--sezione inserimento dati-->
         <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <div class="container">
-            <!--nome e cognome-->
-            <label for="nome">Nome e Cognome</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome e Cognome">
+            <div class="flex">
+                <!--nome e cognome-->
+                <div class="sezione">
+                <label for="nome">Nome e Cognome</label>
+                <br>
+                <input type="text" name="nome" id="nome" placeholder="Nome e Cognome">
+                </div>
 
-            <!--km da percorrere-->
-            <label for="km">Km da percorrere</label>
-            <input type="number" name="km" id="km" placeholder="Km da percorrere">
+                <!--km da percorrere-->
+                <div class="sezione">
+                <label for="km">Km da percorrere</label>
+                <br>
+                <input type="number" name="km" id="km" placeholder="Km da percorrere">
+                </div>
 
-            <!--eta-->
-            <label for="eta">Fascia d'etá</label>
-            <select name="eta" id="eta">
-                <option value="minorenne">Minorenne</option>
-                <option value="maggiorenne">Maggiorenne</option>
-                <option value="over">Over 65</option>
-            </select>
+                <!--eta-->
+                <div class="sezione">
+                <label for="eta">Fascia d'etá</label>
+                <br>
+                <select name="eta" id="eta">
+                    <option value="minorenne">Minorenne</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="over">Over 65</option>
+                </select>
+                </div>
+            </div>
 
             <!--bottoni-->
+            <div class="bottoni">
             <button id="genera">Genera</button>
             <button id="annulla">Annulla</button>
+            </div>        
         </div>
         <!--sezione biglietto-->
         <h2>IL TUO BIGLIETTO</h2>
         <div id="biglietto" class="container passenger no-show">
             <h4>DETTAGLIO PASSEGGERI</h4>
+            <div class="linea"></div>
             <!--nome passeggero-->
-            <div>
-                <h5>NOME PASSEGGERO</h5>
-                <span id="nomepass"></span>
+            <div class="flex align-start">
+                <div class="nome-passeggero">
+                    <h5>NOME PASSEGGERO</h5>
+                    <strong id="nomepass"></strong>
+                </div>
+                <!--/nome passeggero-->
+                <!--offerta-->
+                <div>
+                    <strong class="mbottom" >Offerta</strong>
+                    <br>
+                    <span id="etapass"></span>
+                </div>
+                <!--/offerta-->
+                <!--carrozza-->
+                <div>
+                    <strong class="mbottom">Carrozza</strong>
+                    <br>
+                    <span id="carrozza"></span>
+                </div>
+                <!--/carrozza-->
+                <!--codice cp-->
+                <div>
+                    <strong class="mbottom">Codice CP</strong>
+                    <br>
+                    <span id="codiceCP"></span>
+                </div>
+                <!--/codice cp-->
+                <!--costo biglietto-->
+                <div>
+                    <strong class="mbottom">Costo biglietto</strong>
+                    <br>
+                    <span id="costo"></span>
+                </div>
+                
+                <!--/costo biglietto-->
             </div>
-            <!--/nome passeggero-->
-            <!--offerta-->
-            <div>
-                <strong>Offerta</strong>
-                <span id="etapass"></span>
-            </div>
-            <!--/offerta-->
-            <!--carrozza-->
-            <div>
-                <strong>Carrozza</strong>
-                <span id="carrozza"></span>
-            </div>
-            <!--/carrozza-->
-            <!--codice cp-->
-            <div>
-                <strong>Codice CP</strong>
-                <span id="codiceCP"></span>
-            </div>
-            <!--/codice cp-->
-            <!--costo biglietto-->
-            <div>
-                <strong>Costo biglietto</strong>
-                <span id="costo"></span>
-            </div>
-            <!--/costo biglietto-->
+            <div class="linea"></div>
         </div>
 
 
