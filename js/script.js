@@ -4,6 +4,8 @@
 //va applicato uno sconto del 20% per i minorenni
 //va applicato uno sconto del 40% per gli over 65.
 
+var biglietto = document.getElementById("biglietto");
+
 var genera = document.getElementById("genera");
 
 
@@ -23,22 +25,35 @@ function() {
     //prezzo biglietto + offerta
     if (eta.value == "minorenne"){
         etapass.innerHTML = "offerta giovani";
-        costo.innerHTML = (prezzoTot / 100 * 80).toFixed(2);
+        costo.innerHTML = (prezzoTot / 100 * 80).toFixed(2) + " &euro;";
     } else if (eta.value == "over"){
         etapass.innerHTML = "tariffa vecchi";
-        costo.innerHTML = (prezzoTot / 100 * 60).toFixed(2);
+        costo.innerHTML = (prezzoTot / 100 * 60).toFixed(2) + " &euro;";
     } else {
         etapass.innerHTML = "tariffa normale";
-        costo.innerHTML = prezzoTot;
+        costo.innerHTML = prezzoTot + " &euro;";
     }
     console.log(km)
     //carrozza
     document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 6) + 1;
     //
     document.getElementById("codiceCP").innerHTML = Math.floor(Math.random() * 999) + 9000;
+
+    
+    biglietto.classList.add("show")
 });
 
 
 var annulla = document.getElementById("annulla");
+
+annulla.addEventListener("click", 
+function() {
+    document.getElementById("nome").value = " ";
+    document.getElementById("km").value = " ";
+    document.getElementById("eta").value = " ";
+
+
+    biglietto.classList.remove("show")
+});
 
 

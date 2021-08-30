@@ -26,3 +26,11 @@ label {
 .container.passenger h4 {
     text-align: start;
 }
+
+.no-show {
+    display: none;
+}
+
+.show {
+    display: block;
+}
