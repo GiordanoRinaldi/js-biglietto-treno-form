@@ -8,7 +8,67 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
+        <!--sezione inserimento dati-->
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="container">
+            <!--nome e cognome-->
+            <label for="nome">Nome e Cognome</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome e Cognome">
+
+            <!--km da percorrere-->
+            <label for="km">Km da percorrere</label>
+            <input type="number" name="km" id="km" placeholder="Km da percorrere">
+
+            <!--eta-->
+            <label for="eta">Fascia d'etá</label>
+            <select name="eta" id="eta">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over">Over 65</option>
+            </select>
+
+            <!--bottoni-->
+            <button id="genera">Genera</button>
+            <button id="annulla">Annulla</button>
+        </div>
+        <!--sezione biglietto-->
+        <h2>IL TUO BIGLIETTO</h2>
+        <div class="container passenger">
+            <h4>DETTAGLIO PASSEGGERI</h4>
+            <!--nome passeggero-->
+            <div>
+                <h5>NOME PASSEGGERO</h5>
+                <span id="nome"></span>
+            </div>
+            <!--/nome passeggero-->
+            <!--offerta-->
+            <div>
+                <strong>Offerta</strong>
+                <span id="eta"></span>
+            </div>
+            <!--/offerta-->
+            <!--carrozza-->
+            <div>
+                <strong>Carrozza</strong>
+                <span id="carrozza"></span>
+            </div>
+            <!--/carrozza-->
+            <!--codice cp-->
+            <div>
+                <strong>Codice CP</strong>
+                <span id="codiceCP"></span>
+            </div>
+            <!--/codice cp-->
+            <!--costo biglietto-->
+            <div>
+                <strong>Costo biglietto</strong>
+                <span id="costo">
+                    
+                </span>
+            </div>
+            <!--/costo biglietto-->
+        </div>
+
 
 
 
