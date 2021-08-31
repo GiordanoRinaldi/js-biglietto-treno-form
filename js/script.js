@@ -23,24 +23,31 @@ function() {
     //nome pass
     nomepass.innerHTML = nome;
     //prezzo biglietto + offerta
-    if (eta == "minorenne"){
-        etapass.innerHTML = "Promo giovani";
-        costo.innerHTML = (prezzoTot / 100 * 80).toFixed(2) + " &euro;";
-    } else if (eta == "over"){
-        etapass.innerHTML = "Tariffa senior";
-        costo.innerHTML = (prezzoTot / 100 * 60).toFixed(2) + " &euro;";
-    } else {
-        etapass.innerHTML = "Tariffa normale";
-        costo.innerHTML = prezzoTot.toFixed(2) + " &euro;";
-    }
-    console.log(km)
-    //carrozza
-    document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 6) + 1;
-    //codiceCP
-    document.getElementById("codiceCP").innerHTML = Math.floor(Math.random() * 999) + 9000;
 
+    if ( nome != "" && !isNaN(km) && km > 0 && eta != "") {
+        
+        if (eta == "minorenne"){
+            etapass.innerHTML = "Promo giovani";
+            costo.innerHTML = (prezzoTot / 100 * 80).toFixed(2) + " &euro;";
+        } else if (eta == "over"){
+            etapass.innerHTML = "Tariffa senior";
+            costo.innerHTML = (prezzoTot / 100 * 60).toFixed(2) + " &euro;";
+        } else {
+            etapass.innerHTML = "Tariffa normale";
+            costo.innerHTML = prezzoTot.toFixed(2) + " &euro;";
+        }
+        console.log(km)
+        //carrozza
+        document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 6) + 1;
+        //codiceCP
+        document.getElementById("codiceCP").innerHTML = Math.floor(Math.random() * 999) + 9000;
+
+        
+        biglietto.classList.add("show")
+    } else {
+        alert("Errore!")
+    }
     
-    biglietto.classList.add("show")
 });
 
 
