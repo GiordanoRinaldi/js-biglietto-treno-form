@@ -79,7 +79,7 @@ button:hover {
     border-radius: 4px;
 }
 
-.container.passenger h4 {
+.passenger h4 {
     text-align: start;
 }
 
@@ -117,4 +117,9 @@ h2 {
 
 .flex.align-start div {
     padding: 10px;
+}
+
+.passenger.container {
+    border-radius: 0px;
+    box-shadow: none;
 }
