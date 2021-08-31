@@ -13,30 +13,30 @@ var genera = document.getElementById("genera");
 genera.addEventListener("click", 
 function() { 
     //creo var dei dati
-    var nome = document.getElementById("nome");
+    var nome = document.getElementById("nome").value;
     var km = parseInt(document.getElementById("km").value);
-    var eta = document.getElementById("eta");
+    var eta = document.getElementById("eta").value;
     //var del "biglietto"
     var nomepass = document.getElementById("nomepass");
     var costo = (document.getElementById("costo"));
     var prezzoTot = km * 0.21;
     //nome pass
-    nomepass.innerHTML = nome.value;
+    nomepass.innerHTML = nome;
     //prezzo biglietto + offerta
-    if (eta.value == "minorenne"){
+    if (eta == "minorenne"){
         etapass.innerHTML = "Promo giovani";
         costo.innerHTML = (prezzoTot / 100 * 80).toFixed(2) + " &euro;";
-    } else if (eta.value == "over"){
+    } else if (eta == "over"){
         etapass.innerHTML = "Tariffa senior";
         costo.innerHTML = (prezzoTot / 100 * 60).toFixed(2) + " &euro;";
     } else {
         etapass.innerHTML = "Tariffa normale";
-        costo.innerHTML = prezzoTot + " &euro;";
+        costo.innerHTML = prezzoTot.toFixed(2) + " &euro;";
     }
     console.log(km)
     //carrozza
     document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 6) + 1;
-    //
+    //codiceCP
     document.getElementById("codiceCP").innerHTML = Math.floor(Math.random() * 999) + 9000;
 
     
@@ -48,12 +48,15 @@ var annulla = document.getElementById("annulla");
 
 annulla.addEventListener("click", 
 function() {
-    document.getElementById("nome").value = "";
-    document.getElementById("km").value = "";
-    //document.getElementById("eta").value = ;
-
-
     biglietto.classList.remove("show")
+
+
+    document.getElementById("nome").value = " ";
+    document.getElementById("km").value = "";
+    document.getElementById("eta").value = "" ;
+
+
+    
 });
 
 
